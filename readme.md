@@ -1,87 +1,84 @@
-# You Don't Need GUI
+# 你不需要的图形界面
 
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/GUI)
+[![社区](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/GUI)
 
 <details>
-It's for noobs :)
+开箱即用,有手就行 :)
 </details>
 <br />
-
-Graphical user interfaces are super friendly to computer users. They were introduced in reaction to the perceived steep learning curve of command-line interfaces (CLIs).
+用户图形界面是极其友好的,引入他们可以减小队命令行陡峭学习曲线的感知.
 
 ![Xerox Star 8010 workstations](./Xerox_Star_8010_workstations.jpg)
 
-However, they often require more resources, are less powerful and hard to automate via scripting.
+然而, 他们经常需要更多的资源,功能较弱且难以通过脚本实现自动化.
+我们知道命令词可能不是那么被记住,所以我们列出以下在图形界面常用的命令.
 
-As a computer expert, we want to be more efficient and do our jobs better. We know that command words may not be easily discoverable or mnemonic, so we try to list some common tasks that you might be tempted to do in GUI.
-
-## Quick links
-
-1. [copy a file](#copy-a-file)
-1. [duplicate a file](#duplicate-a-file)
-1. [copy a directory](#copy-a-directory)
-1. [duplicate a directory](#duplicate-a-directory)
-1. [move a file](#move-a-file)
-1. [rename a file](#rename-a-file)
-1. [move a directory](#move-a-directory)
-1. [rename a directory](#rename-a-directory)
-1. [merge directories](#merge-directories)
-1. [create a new file](#create-a-new-file)
-1. [create a new directory](#create-a-new-directory)
-1. [show file/directory size](#show-filedirectory-size)
-1. [show file/directory info](#show-filedirectory-info)
-1. [open a file with the default program](#open-a-file-with-the-default-program)
-1. [zip a directory](#zip-a-directory)
-1. [unzip a directory](#unzip-a-directory)
-1. [peek files in a zip file](#peek-files-in-a-zip-file)
-1. [remove a file](#remove-a-file)
-1. [remove a directory](#remove-a-directory)
-1. [list directory contents](#list-directory-contents)
-1. [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
-1. [find a stale file](#find-a-stale-file)
-1. [show a calendar](#show-a-calendar)
-1. [find a future date](#find-a-future-date)
-1. [use a calculator](#use-a-calculator)
-1. [force quit a program](#force-quit-a-program)
-1. [check server response](#check-server-response)
-1. [view content of a file](#view-content-of-a-file)
-1. [search for a text](#search-for-a-text)
-1. [view an image](#view-an-image)
-1. [show disk size](#show-disk-size)
-1. [check performance of your computer](#check-performance-of-your-computer)
-1. [Quick tips](#quick-tips)
-1. [Hotkeys](#hotkeys)
-1. [I can't remember these cryptic commands](#i-cant-remember-these-cryptic-commands)
+## 快速跳转
+  - [复制文件](#copy-a-file)
+  - [duplicate a file](#duplicate-a-file)
+  - [copy a directory](#copy-a-directory)
+  - [duplicate a directory](#duplicate-a-directory)
+  - [move a file](#move-a-file)
+  - [rename a file](#rename-a-file)
+  - [move a directory](#move-a-directory)
+  - [rename a directory](#rename-a-directory)
+  - [merge directories](#merge-directories)
+  - [create a new file](#create-a-new-file)
+  - [create a new directory](#create-a-new-directory)
+  - [show file/directory size](#show-filedirectory-size)
+  - [show file/directory info](#show-filedirectory-info)
+  - [open a file with the default program](#open-a-file-with-the-default-program)
+  - [zip a directory](#zip-a-directory)
+  - [unzip a directory](#unzip-a-directory)
+  - [peek files in a zip file](#peek-files-in-a-zip-file)
+  - [remove a file](#remove-a-file)
+  - [remove a directory](#remove-a-directory)
+  - [list directory contents](#list-directory-contents)
+  - [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
+  - [find a stale file](#find-a-stale-file)
+  - [show a calendar](#show-a-calendar)
+  - [find a future date](#find-a-future-date)
+  - [use a calculator](#use-a-calculator)
+  - [force quit a program](#force-quit-a-program)
+  - [check server response](#check-server-response)
+  - [view content of a file](#view-content-of-a-file)
+  - [search for a text](#search-for-a-text)
+  - [view an image](#view-an-image)
+  - [show disk size](#show-disk-size)
+  - [check performance of your computer](#check-performance-of-your-computer)
+  - [Quick tips](#quick-tips)
+  - [Hotkeys](#hotkeys)
+  - [I can't remember these cryptic commands](#i-cant-remember-these-cryptic-commands)
 
 
-## copy a file
+## 复制文件
 
-**STOP DRAG AND DROPPING A FILE, OR CMD/CTRL + C, CMD/CTRL + V A FILE** :-1:
+**别再拖拽或Ctrl C了** :-1:
 
-Copy `readme.txt` to the `documents` directory
+拷贝文件 `readme.txt` 到 `documents` 目录下
 
 ```shell
 $ cp readme.txt documents/
 ```
 
-## duplicate a file
+## 复制文件
 
-**STOP RIGHT CLICKING AND DUPLICATE A FILE** :-1:
+**停止使用右键复制粘贴** :-1:
 
 ```shell
 $ cp readme.txt readme.bak.txt
 ```
-More advanced:
+更强的功能:
 ```shell
 $ cp readme{,.bak}.txt
 # Note: learn how the {} works with touch foo{1,2,3}.txt and see what happens.
 ```
 
-## copy a directory
+## 复制文件夹
 
-**STOP DRAG AND DROPPING A DIRECTORY, OR CMD/CTRL + C, CMD/CTRL + V A DIRECTORY** :-1:
+**请立刻停止你的右键复制行为** :-1:
 
-Copy `myMusic` directory to the `myMedia` directory
+复制 `myMusic` 文件夹 到 `myMedia` 目录下
 
 ```shell
 $ cp -a myMusic myMedia/
@@ -91,35 +88,30 @@ $ cp -a myMusic/ myMedia/myMusic/
 
 ## duplicate a directory
 
-**STOP RIGHT CLICKING AND DUPLICATE A DIRECTORY** :-1:
-
+将`myMusic` 下的所有文件复制到`myMedia`目录下
 ```shell
 $ cp -a myMusic/ myMedia/
 # or if `myMedia` folder doesn't exist
 $ cp -a myMusic myMedia/
 ```
 
-## move a file
+## 移动文件
 
-**STOP DRAG AND DROPPING A FILE, OR CMD/CTRL + X, CMD/CTRL + V A FILE** :-1:
 
 ```shell
 $ mv readme.txt documents/
 ```
 
-**Always** use a trailing slash when moving files, [for this reason](http://unix.stackexchange.com/a/50533).
+**切记** 使用'/' 结尾, [for this reason](http://unix.stackexchange.com/a/50533).
 
-## rename a file
+## 重命名
 
-**STOP RIGHT CLICKING AND RENAME A FILE** :-1:
 
 ```shell
 $ mv readme.txt README.md
 ```
 
-## move a directory
-
-**STOP DRAG AND DROPPING A DIRECTORY, OR CMD/CTRL + X, CMD/CTRL + V A DIRECTORY** :-1:
+## 移动文件
 
 ```shell
 $ mv myMedia myMusic/
@@ -127,25 +119,20 @@ $ mv myMedia myMusic/
 $ mv myMedia/ myMusic/myMedia
 ```
 
-## rename a directory
-
-**STOP RIGHT CLICKING AND RENAME A DIRECTORY** :-1:
+## 重命名文件夹
 
 ```shell
 $ mv myMedia/ myMusic/
 ```
 
-## merge directories
-
-**STOP DRAG AND DROPPING TO MERGE DIRECTORIES** :-1:
+## 合并目录
 
 ```shell
 $ rsync -a /images/ /images2/	# note: may over-write files with the same name, so be careful!
 ```
 
-## create a new file
+## 创建文件
 
-**STOP RIGHT CLICKING AND CREATE A NEW FILE** :-1:
 
 ```shell
 $ touch 'new file'    # updates the file's access and modification timestamp if it already exists
@@ -153,69 +140,48 @@ $ touch 'new file'    # updates the file's access and modification timestamp if 
 $ > 'new file'        # note: erases the content if it already exists
 ```
 
-## create a new directory
+## 创建文件夹
 
-**STOP RIGHT CLICKING AND CREATE A NEW DIRECTORY** :-1:
 
 ```shell
 $ mkdir 'untitled folder'
 # or
 $ mkdir -p 'path/may/not/exist/untitled\ folder'
+# -p 指定创建路径,如果没有路径则会创建路径
 ```
 
-## show file/directory size
+## 查看文件或文件夹大小
 
-**STOP RIGHT CLICKING AND SHOW FILE/directory INFO** :-1:
 
 ```shell
 $ du -sh node_modules/
 ```
 
-## show file/directory info
-
-**STOP RIGHT CLICKING AND SHOW FILE/DIRECTORY INFO** :-1:
+## 查看文件或文件夹信息
 
 ```shell
 $ stat -x readme.md   # on macOS
 $ stat readme.md      # on Linux
 ```
 
-## open a file with the default program
-
-**STOP DOUBLE CLICKING ON A FILE** :-1:
+## 使用默认程序打开文件或文件夹
 
 ```shell
-$ xdg-open file   # on Linux
 $ open file       # on MacOS
 ```
 
-## zip a directory
-
-**STOP RIGHT CLICKING AND COMPRESS DIRECTORY** :-1:
+## 压缩文件夹
 
 ```shell
 $ zip -r archive_name.zip folder_to_compress
 ```
 
-## unzip a directory
-
-**STOP RIGHT CLICKING AND UNCOMPRESS DIRECTORY** :-1:
+## 解压
 
 ```shell
 $ unzip archive_name.zip
 ```
-
-## peek files in a zip file
-
-**STOP USING WinRAR** :-1:
-
-```shell
-$ zipinfo archive_name.zip
-# or
-$ unzip -l archive_name.zip
-```
-
-## remove a file
+## 删除文件
 
 **STOP RIGHT CLICKING AND DELETE A FILE PERMANENTLY** :-1:
 
@@ -223,19 +189,15 @@ $ unzip -l archive_name.zip
 $ rm my_useless_file
 ```
 
-IMPORTANT: The rm command deletes my_useless_file permanently, which is equivalent to move my_useless_file to Recycle Bin and hit Empty Recycle Bin.
+IMPORTANT: 永久性删除.
 
-## remove a directory
-
-**STOP RIGHT CLICKING AND DELETE A DIRECTORY PERMANENTLY** :-1:
+## 删除文件夹
 
 ```shell
 $ rm -r my_useless_folder
 ```
 
-## list directory contents
-
-**STOP OPENING YOUR FINDER OR FILE EXPLORER** :-1:
+## 查看文件夹内容
 
 ```shell
 $ ls my_folder        # Simple
@@ -243,7 +205,7 @@ $ ls -la my_folder    # -l: show in list format. -a: show all files, including h
 $ ls -alrth my_folder # -r: reverse output. -t: sort by time (modified). -h: output human-readable sizes.
 ```
 
-## tree view a directory and its subdirectories
+## 使用树形结构查看目录
 
 **STOP OPENING YOUR FINDER OR FILE EXPLORER** :-1:
 
@@ -256,24 +218,21 @@ $ find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'      # on MacOS
 
 ## find a stale file
 
-**STOP USING YOUR FILE EXPLORER TO FIND A FILE** :-1:
 
 Find all files modified more than 5 days ago
-
+****
 ```shell
 $ find my_folder -mtime +5
 ```
 
-## show a calendar
+## 展示日历
 
-**STOP LOOKING UP WHAT THIS MONTH LOOKS LIKE BY CALENDAR WIDGETS** :-1:
-
-Display a text calendar
+展示一个日志
 
 ```shell
 $ cal
 ```
-Display selected month and year calendar
+展示指定年月
 
 ```shell
 $ cal 11 2018
@@ -296,17 +255,14 @@ $ date -d "+7 days"                                           # on Linux
 $ date -j -v+7d                                               # on MacOS
 ```
 
-## use a calculator
-
-**STOP USING CALCULATOR WIDGET** :-1:
+## 展示一个计算器
 
 ```shell
 $ bc
 ```
 
-## force quit a program
+## 强制退出程序
 
-**STOP CTRL + ALT + DELETE and choose the program to kill** :-1:
 
 ```shell
 $ killall program_name
@@ -321,27 +277,23 @@ curl -i umair.surge.sh
 # curl's -i (--include) option includes HTTP response headers in its output.
 ```
 
-## view content of a file
+## 查看文件内容
 
 **STOP DOUBLE CLICKING A FILE** :-1:
 
 ```shell
 $ cat apps/settings.py
-# if the file is too big to fit on one page, you can use a 'pager' (less) which shows you one page at a time.
+# 如果文件太大,可以用 'pager' (less) ,一次性展示.
 $ less apps/settings.py
 ```
 
-## search for a text
-
-**STOP CMD/CTRL + F IN A DIRECTORY** :-1:
+## 文件内搜索
 
 ```shell
 $ grep -i "Query" file.txt
 ```
 
-![grep](./grep.jpg)
-
-## view an image
+## 查看一张图片
 
 **STOP USING PREVIEW** :-1:
 
@@ -350,17 +302,13 @@ $ imgcat image.png
 # Note: requires iTerm2 terminal.
 ```
 
-## show disk size
-
-**STOP RIGHT CLICKING DISK ICON OR OPENING DISK UTILITY** :-1:
+## 查看磁盘大小
 
 ```shell
 $ df -h
 ```
 
-## check performance of your computer
-
-**STOP OPENING YOUR ACTIVITY MONITOR OR TASK MANAGER** :-1:
+## 查看任务占用情况
 
 ```shell
 $ top
@@ -373,7 +321,7 @@ $ top
 ## Hotkeys
 
 ```
-Ctrl + A  Go to the beginning of the line you are currently typing on
+ Ctrl + A  Go to the beginning of the line you are currently typing on
 Ctrl + E  Go to the end of the line you are currently typing on
 Ctrl + L  Clears the Screen, similar to the clear command
 Ctrl + U  Clears the line before the cursor position. If you are at the end of the line, clears the entire line.
@@ -391,6 +339,3 @@ Alt + B   Move cursor backward one word on the current line
 Tab       Auto-complete files and directory names
 ```
 
-## I can't remember these cryptic commands
-
-You can always google or `man` the commands you are not familiar with. Or, checkout [tldr](https://github.com/tldr-pages/tldr), a collection of simplified and community-driven man pages.
